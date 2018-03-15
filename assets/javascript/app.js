@@ -251,6 +251,8 @@ $(document).ready(function() {
         if ($(this).val() == "" || $(this).val() == " " || $(this).val() == "  ") {
             event.preventDefault();
         } else if (event.keyCode === 13) {
+            $('#welcome').hide();
+            $('#mainContainer').css({ 'margin-top': '0' }); 
             $("#search-btn").click();
         }
     });
@@ -493,17 +495,28 @@ $(document).ready(function() {
                     .html(userCity);
                 var tempF = $("<p>")
                     .addClass("temp-f")
-                    .html(tempFahrenheit);
+                    .html(tempFahrenheit + " &#8457");
                 var tempC = $("<p>")
                     .addClass("temp-c")
-                    .html(tempCelsius);
+                    .html(tempCelsius + " &#8451");
                 var descr = $("<p>")
                     .addClass("decription")
                     .html(weatherDescription);
                 var category = $("<p>")
                     .addClass("category")
                     .html(weatherCategory);
-                var weatherIcon = $("<img>").addClass("weather-icom center-block").attr("src", 'http://openweathermap.org/img/w/' + response.weather[0].icon + '.png');
+                var weatherIcon = $("<img>")
+                      .addClass("weather-icom")
+                      .attr(
+                        "src",
+                        "http://openweathermap.org/img/w/" +
+                          response.weather[0].icon +
+                          ".png"
+                      );
+
+
+
+
                 var iconCode = response.weather[0].icon;
                 var iconUrl = 'http://openweathermap.org/img/w/' + iconCode + '.png';
                 weatherCont.append(city);

@@ -4,6 +4,33 @@
     z-index: 300;
 }
 
+.weathercont {
+ text-align: center;
+}
+
+#search-bar {
+ margin: auto;
+ width: 50%;
+ text-align: center;
+}
+
+/*#search-btn {
+ text-align: center;
+ margin-top: 2rem;
+ border-color: white;
+ border-radius: 0;
+ color: white;
+ font-family: 'brandon-grotesque', sans-serif;
+ font-size: 1.25rem;
+}*/
+
+#userCity {
+ border-style: solid;
+ border: 1px solid;
+ border-color: white;
+ font-family: 'brandon-grotesque', sans-serif;
+}
+
 #userCity{
   width: 100%;
 }
